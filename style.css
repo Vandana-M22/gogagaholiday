@@ -5,18 +5,15 @@ body {
   color: #111;
 }
 
-/* IMPORTANT FIX */
 * {
-  box-sizing: border-box;  /* 👈 THIS FIXES WIDTH ISSUE */
+  box-sizing: border-box; 
 }
 
-/* Layout */
 .container {
   display: flex;
   width: 100%;
 }
 
-/* Sidebar */
 .sidebar {
   width: 250px;
   padding: 24px;
@@ -26,9 +23,8 @@ body {
   height: 100vh;
 }
 
-/* Main — PERFECT ALIGN */
 .main {
-  margin-left: 250px;   /* now matches exactly */
+  margin-left: 250px;  
   padding: 30px 40px;
 
   width: calc(100% - 250px);
@@ -37,14 +33,12 @@ body {
   margin-right: auto;
 }
 
-/* Logo */
 .logo {
   color: #22c55e;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-/* Menu */
 .menu {
   list-style: none;
   padding: 0;
@@ -73,7 +67,6 @@ body {
   color: #888;
 }
 
-/* Tabs */
 .tabs, .subtabs {
   margin-bottom: 10px;
 }
@@ -96,7 +89,6 @@ body {
   color: white;
 }
 
-/* Filters */
 .filters {
   display: flex;
   align-items: center;
@@ -116,14 +108,12 @@ body {
   border-radius: 6px;
 }
 
-/* Hotel */
 .hotel-group {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-/* Toggle */
 .toggle {
   padding: 4px 10px;
   border: 1px solid #ccc;
@@ -137,7 +127,6 @@ body {
   color: white;
 }
 
-/* Switch */
 .switch {
   width: 32px;
   height: 16px;
@@ -168,7 +157,6 @@ input:checked + .switch::after {
   transform: translateX(16px);
 }
 
-/* Summary */
 .summary-bar {
   margin-top: 20px;
   background: linear-gradient(135deg, #2f64d6, #1e40af);
@@ -195,7 +183,6 @@ input:checked + .switch::after {
   font-weight: 600;
 }
 
-/* Flights */
 .flight-container {
   display: flex;
   gap: 30px;
@@ -212,7 +199,6 @@ input:checked + .switch::after {
   font-weight: 500;
 }
 
-/* Cards */
 .card {
   background: #fff;
   padding: 14px 16px;
@@ -231,21 +217,17 @@ input:checked + .switch::after {
   transform: translateY(-2px);
 }
 
-/* Left */
 .left {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-/* Logo */
 .left img {
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
 
-/* Text */
 .airline-name {
   font-size: 14px;
   font-weight: 500;
@@ -256,20 +238,17 @@ input:checked + .switch::after {
   color: #666;
 }
 
-/* Price */
 .price {
   font-weight: 600;
   font-size: 14px;
   white-space: nowrap;
 }
 
-/* Selected */
 .card.selected {
   border: 2px solid #2f64d6;
   background: #f0f6ff;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .main {
     margin-left: 0;
