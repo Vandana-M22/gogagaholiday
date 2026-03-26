@@ -3,7 +3,6 @@ let retPrice = 0;
 let depSelected = false;
 let retSelected = false;
 
-// SELECT FLIGHT
 function selectCard(card, type) {
   const parent = card.parentElement;
 
@@ -25,17 +24,15 @@ function selectCard(card, type) {
 
   document.getElementById("total").innerText = "₹" + (depPrice + retPrice);
 
-  // SHOW FORM ONLY AFTER BOTH SELECTED
   if (depSelected && retSelected) {
     document.getElementById("booking-form").classList.remove("hidden");
   }
 }
 
-// WAIT FOR DOM
 document.addEventListener("DOMContentLoaded", function () {
 
   const modal = document.getElementById("confirmation-modal");
-  modal.classList.add("hidden"); // FORCE HIDE ON LOAD ✅
+  modal.classList.add("hidden"); 
 
   const btn = document.querySelector(".book-btn");
 
@@ -50,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // SET CONFIRM DATA
     document.getElementById("confirm-name").innerText = "Passenger: " + name;
     document.getElementById("confirm-dep").innerText =
       "Departure: " + document.getElementById("dep-time").innerText;
@@ -59,13 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("confirm-total").innerText =
       "Total Paid: ₹" + (depPrice + retPrice);
 
-    // SHOW MODAL ONLY HERE ✅
     modal.classList.remove("hidden");
   });
 
 });
 
-// CLOSE MODAL
 function closeModal() {
   document.getElementById("confirmation-modal").classList.add("hidden");
 }
